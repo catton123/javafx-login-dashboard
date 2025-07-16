@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="600.0"
+            style="-fx-background-color: #f0f4f7;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="login.RegisterController">
+
+    <children>
+        <!-- Judul -->
+        <Label layoutX="200.0" layoutY="20.0" style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Register Akun Baru" />
+
+        <!-- Form input -->
+        <VBox layoutX="109.0" layoutY="75.0" prefWidth="400.0" spacing="12.0">
+            <Label text="Nama Lengkap" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <TextField fx:id="namaField" prefWidth="300.0" />
+
+            <Label text="NIM" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <TextField fx:id="nimField" prefWidth="300.0" />
+
+            <Label text="No HP" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <TextField fx:id="nohpField" prefWidth="300.0" />
+
+            <Label text="Email" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <TextField fx:id="emailField" prefWidth="300.0" />
+
+            <Label text="Username" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <TextField fx:id="usernameField" prefWidth="300.0" />
+
+            <Label text="Password" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <PasswordField fx:id="passwordField" prefWidth="300.0" />
+
+            <Label text="Jenis Kelamin" style="-fx-text-fill: #333; -fx-font-size: 14px;" />
+            <HBox spacing="10.0">
+                <RadioButton fx:id="lakiRadio" text="Laki-laki">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="genderGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="perempuanRadio" text="Perempuan" toggleGroup="$genderGroup" />
+            </HBox>
+        </VBox>
+
+        <!-- Tombol aksi -->
+        <HBox layoutX="160.0" layoutY="570.0" spacing="20.0">
+            <Button fx:id="loginButton"
+                    onAction="#goToLogin"
+                    style="-fx-background-color: #007BFF; -fx-text-fill: white; -fx-font-weight: bold;"
+                    prefWidth="120" text="Login" />
+
+            <Button fx:id="registerButton"
+                    onAction="#handleRegister"
+                    style="-fx-background-color: #28a745; -fx-text-fill: white; -fx-font-weight: bold;"
+                    prefWidth="120" text="Register" />
+        </HBox>
+
+        <!-- Label status di bawah tombol -->
+        <Label fx:id="messageLabel"
+               layoutX="150.0" layoutY="615.0"
+               prefWidth="300.0" alignment="CENTER"
+               style="-fx-font-size: 14px; -fx-text-fill: red;" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" 
+xmlns="http://javafx.com/javafx/23.0.1" 
+xmlns:fx="http://javafx.com/fxml/1" 
+fx:controller="user.TableController">
+
+    <!-- Tombol Kembali -->
+    <Button fx:id="btnBack" 
+    layoutX="14.0" layoutY="10.0" onAction="#handleBack" prefWidth="100" 
+    style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="⟵ Kembali" />
+
+    <!-- TableView Full Responsive -->
+    <TableView fx:id="userTable" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="14.0" 
+    AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="50.0">
+
+        <columns>
+            <TableColumn fx:id="colNama" prefWidth="124.66665172576904" style="-fx-alignment: CENTER;" text="Nama Lengkap" />
+            <TableColumn fx:id="colNim" prefWidth="89.33334350585938" style="-fx-alignment: CENTER;" text="NIM" />
+            <TableColumn fx:id="colNoHp" prefWidth="121.99995422363281" style="-fx-alignment: CENTER;" text="No HP" />
+            <TableColumn fx:id="colEmail" prefWidth="138.0" style="-fx-alignment: CENTER;" text="Email" />
+            <TableColumn fx:id="colJenisKelamin" prefWidth="90.66665649414062" style="-fx-alignment: CENTER;" text="Jenis Kelamin" />
+            <TableColumn fx:id="colUsername" prefWidth="68.66668701171875" style="-fx-alignment: CENTER;" text="Username" />
+            <TableColumn fx:id="colPassword" minWidth="0.0" prefWidth="94.666748046875" style="-fx-alignment: CENTER;" text="Password" />
+        </columns>
+    </TableView>
+</AnchorPane>

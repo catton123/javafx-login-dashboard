@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="from.FromController" spacing="10" alignment="CENTER" padding="20">
+    <TextField fx:id="nimField" promptText="NIM"/>
+    <TextField fx:id="kelasField" promptText="Kelas"/>
+    <TextField fx:id="ipkField" promptText="IPK"/>
+    <TextField fx:id="semesterField" promptText="Semester"/>
+    <TextField fx:id="sksField" promptText="Total SKS"/>
+    <Button text="Simpan" onAction="#handleSimpan"/>
+    <Label fx:id="messageLabel"/>
+</VBox>
